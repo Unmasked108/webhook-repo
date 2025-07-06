@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Webhook Events</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GitHub Webhook Events</h1>
+            <div class="status" id="status">
+                <span class="status-dot" id="status-dot"></span>
+                <span id="status-text">Connecting...</span>
+            </div>
+        </header>
+        
+        <main>
+            <div class="events-container">
+                <div class="loading" id="loading">Loading events...</div>
+                <div class="events-list" id="events-list"></div>
+                <div class="no-events" id="no-events" style="display: none;">
+                    <p>No events received yet.</p>
+                    <p>Make sure your GitHub webhook is configured correctly.</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Last updated: <span id="last-updated">Never</span></p>
+            <p>Auto-refresh every 15 seconds</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
