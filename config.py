@@ -3,7 +3,7 @@ from datetime import timedelta
 
 class Config:
     # MongoDB Configuration
-    MONGODB_URI = os.environ.get('MONGODB_URI') or 'mongodb://localhost:27017/'
+    MONGODB_URI = os.environ.get('MONGODB_URI') or 'mongodb://localhost:27017/action'
     DATABASE_NAME = os.environ.get('DATABASE_NAME') or 'webhook_events'
     COLLECTION_NAME = os.environ.get('COLLECTION_NAME') or 'github_events'
     
